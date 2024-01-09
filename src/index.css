@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: 'Euclid Circular A';
+	font-style: normal;
+	font-weight: normal;
+	src: url('./fonts/Euclid\ Circular\ A\ Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Euclid Circular A';
+	font-style: bold;
+	font-weight: normal;
+	src: url('./assets/euclid-circular-a-cufonfonts/Euclid\ Circular\ A\ Bold')
+		format('truetype');
+}
+@font-face {
+	font-family: 'Euclid Circular A SemiBold';
+	src: url('./assets/euclid-circular-a-cufonfonts/Euclid\ Circular\ A\ SemiBold')
+		format('truetype');
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+	font-family: 'Euclid Circular A';
+}
