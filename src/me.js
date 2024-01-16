@@ -157,7 +157,7 @@ export const me = {
 			uri: 'https://www.linkedin.com/in/jérémy-to/',
 		},
 		{
-			name: 'My résumé',
+			name: 'My resume',
 			uri: '/assets/CV FR Jeremy TO.pdf',
 		},
 	],
