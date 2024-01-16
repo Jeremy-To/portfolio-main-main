@@ -1,31 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+:root {
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
 
-@font-face {
-	font-family: 'Euclid Circular A';
-	font-style: normal;
-	font-weight: normal;
-	src: url('./fonts/Euclid\ Circular\ A\ Regular.ttf') format('truetype');
-}
-@font-face {
-	font-family: 'Euclid Circular A';
-	font-style: bold;
-	font-weight: normal;
-	src: url('./assets/euclid-circular-a-cufonfonts/Euclid\ Circular\ A\ Bold')
-		format('truetype');
-}
-@font-face {
-	font-family: 'Euclid Circular A SemiBold';
-	src: url('./assets/euclid-circular-a-cufonfonts/Euclid\ Circular\ A\ SemiBold')
-		format('truetype');
-}
+	color-scheme: light dark;
+	color: rgba(255, 255, 255, 0.87);
+	background-color: #242424;
 
-*,
-*::after,
-*::before {
-	margin: 0;
-	padding: 0;
-	box-sizing: inherit;
-	font-family: 'Euclid Circular A';
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }

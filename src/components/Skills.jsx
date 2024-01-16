@@ -1,12 +1,11 @@
-import { me } from '../me';
-
-function Skills() {
+/* eslint-disable react/prop-types */
+function Skills({ mySkills, myEducation, myAbout }) {
 	return (
 		<section id="about" className="bg-amber-600">
 			<div className="py-12 px-24">
 				<h2 className="flex flex-col gap-8s justify-center items-center">
 					<span className="text-8xl font-bold ">About Me</span>
-					<span className="text-2xl">{me.about}</span>
+					<span className="text-2xl">{myAbout}</span>
 				</h2>
 				<div className="">
 					<div className="">
@@ -21,7 +20,7 @@ function Skills() {
 					<div className="">
 						<h3 className="text-4xl font-bold">My Skills</h3>
 						<div className="flex flex-wrap gap-2 ">
-							{me.skills.map((skill, number) => (
+							{mySkills.map((skill, number) => (
 								<div className="px-24 py-8 bg-zinc-900 rounded-md" key={number}>
 									{skill.name}
 								</div>
@@ -33,7 +32,7 @@ function Skills() {
 					<div className="">
 						<h3 className="text-4xl font-bold">Eductaion</h3>
 						<div>
-							{me.education.map((skill, number) => (
+							{myEducation.map((skill, number) => (
 								<div className="bg-slate-600 mb-8 p-4 rounded-md" key={number}>
 									<p className="text-2xl">{skill.degree}</p>
 									<p>{skill.major}</p>

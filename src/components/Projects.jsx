@@ -1,7 +1,5 @@
-import { me } from '../me';
-// import from ...
-
-function Projects() {
+/* eslint-disable react/prop-types */
+function Projects({ myProjects }) {
 	return (
 		<section id="projects" className="py-24 px-12">
 			<div className="">
@@ -10,7 +8,7 @@ function Projects() {
 				</h2>
 
 				<div className="">
-					{me.projects.map((project, number) => (
+					{myProjects.map((project, number) => (
 						<div className="grid grid-cols-3 gap-10 mb-28" key={number}>
 							<div className="overflow-hidden">
 								<img

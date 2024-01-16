@@ -1,6 +1,5 @@
-import { me } from '../../me';
-
-function Footer() {
+/* eslint-disable react/prop-types */
+function Footer({ myName, mySocial }) {
 	return (
 		<footer className="py-12 px-24">
 			<div className="">
@@ -10,7 +9,7 @@ function Footer() {
 							<span>Social</span>
 						</h2>
 						<div className="flex flex-col ">
-							{me.social.map((item, number) => (
+							{mySocial.map((item, number) => (
 								<div key={number}>
 									{/* 	<a
 										target="_blank"
@@ -30,7 +29,7 @@ function Footer() {
 						</div>
 					</div>
 					<div className="">
-						<h4 className="text-2xl font-bold uppercase">{me.name}</h4>
+						<h4 className="text-2xl font-bold uppercase">{myName}</h4>
 					</div>
 				</div>
 				<div className="mt-24 flex gap-2">

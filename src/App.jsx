@@ -1,19 +1,29 @@
-import './fonts/Euclid Circular A Italic.ttf';
-import './fonts/Euclid Circular A Light.ttf';
-import './fonts/Euclid Circular A Medium Italic.ttf';
-import './fonts/Euclid Circular A Medium.ttf';
-import './fonts/Euclid Circular A Regular.ttf';
-import './fonts/Euclid Circular A SemiBold.ttf';
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
+import Hero from './components/Hero';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
 
-import Home from './pages';
+import { me } from './me';
 
 function App() {
-	if (!localStorage.getItem('theme')) {
-		localStorage.setItem('theme', 'white');
-	}
 	return (
 		<>
-			<Home />
+			<Navbar myName={me.name} />
+			<Hero
+				myName={me.name}
+				myLocation={me.location}
+				mySubtitle={me.subtitle}
+			/>
+			<Skills
+				myAbout={me.about}
+				mySkills={me.skills}
+				myEducation={me.education}
+			/>
+			<Projects myProjects={me.projects} />
+			<Contact />
+			<Footer myName={me.name} mySocial={me.social} />
 		</>
 	);
 }
