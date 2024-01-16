@@ -23,7 +23,7 @@ function App() {
 			/>
 			<Projects myProjects={me.projects} />
 			<Contact />
-			<Footer myName={me.name} mySocial={me.social} />
+			<Footer mySocial={me.social} />
 		</>
 	);
 }

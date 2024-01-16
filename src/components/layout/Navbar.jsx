@@ -12,7 +12,6 @@ function Navbar({ myName }) {
 
 	const toggleTheme = () => {
 		toggleDarkMode();
-		console.log(darkMode);
 	};
 
 	return (
@@ -120,7 +119,7 @@ function Navbar({ myName }) {
 												type="checkbox"
 												onClick={toggleTheme}
 												className="absolute w-8 h-4 transition-colors duration-300 rounded-full appearance-none cursor-pointer peer bg-blue-gray-100 checked:bg-gray-900 peer-checked:border-gray-900 peer-checked:before:bg-gray-900"
-												checked={darkMode}
+												defaultChecked={darkMode}
 											/>
 											<label
 												htmlFor="switch-component"

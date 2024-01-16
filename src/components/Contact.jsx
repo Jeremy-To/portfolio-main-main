@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import useThemeStore from '../store/themeStore';
 
 const Contact = () => {
+	const { darkMode } = useThemeStore();
 	const [template, setTemplate] = useState({});
 	const [isLoading, setIsLoading] = useState(false);
 	const nameRef = useRef();
@@ -39,38 +41,35 @@ const Contact = () => {
 	};
 
 	return (
-		<section id="contact" className="bg-lime-950 py-24">
-			<div className="">
-				<h2 className="flex justify-center">
-					<span className="text-8xl font-bold ">Contact</span>
-				</h2>
-				<div className="bg-white py-4 px-8">
+		<section id="contact" className={darkMode ? 'dark' : ''}>
+			<div className="py-12 px-24 flex flex-col gap-8 justify-center items-start dark:bg-blue-900 bg-blue-400 pt-8">
+				<h2 className="text-8xl font-bold dark:text-white">Contact</h2>
+				<div className="bg-white p-8 rounded-md bg-slate-300 dark:bg-slate-800">
 					<form onSubmit={sendEmail} id="form">
-						<label className="text-2xl text-black ">Name</label>
+						<label className=" text-black dark:text-white ">Name</label>
 						<input
-							className="p-8 w-full border-2 border-gray-300 text-xl bg-gray-100 rounded-md"
+							className="p-8 w-full border-2 border-gray-300 bg-gray-100 rounded-md text-black dark:text-white"
 							type="text"
 							name="user_name"
 							ref={nameRef}
 						/>
-						<label className="text-2xl text-black ">Email</label>
+						<label className=" text-black dark:text-white">Email</label>
 						<input
-							className="p-8 w-full border-2 border-gray-300 text-xl bg-gray-100 rounded-md"
+							className="p-8 w-full border-2 border-gray-300 bg-gray-100 rounded-md text-black dark:text-white"
 							type="email"
 							name="user_email"
 							ref={emailRef}
 						/>
-						<label className="text-2xl text-black ">Message</label>
+						<label className=" text-black dark:text-white ">Message</label>
 						<textarea
 							ref={messageRef}
-							className="p-8 w-full border-2 border-gray-300 text-xl bg-gray-100 rounded-md"
+							className="p-8 w-full border-2 border-gray-300 bg-gray-100 rounded-md text-black dark:text-white"
 							name="message"
 						/>
 						<button
 							disabled={isLoading}
-							className="p-4 border-2 bg-teal-400 text-black text-xl rounded-md "
+							className="p-4 border-2 bg-teal-400 text-black rounded-md dark:text-white"
 							type="submit"
-							onClick={console.log(template)}
 						>
 							{isLoading ? 'Sending...' : 'Send'}
 						</button>

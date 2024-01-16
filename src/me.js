@@ -16,12 +16,12 @@ export const me = {
 	location: 'Paris, France',
 	image: '/assets/world.jpeg',
 	education: [
-		{
+		/* 	{
 			degree: 'Master',
 			major: 'Data, Systems and Network Security',
 			school: '2600 School',
 			graduation: '2026',
-		},
+		}, */
 		{
 			degree: 'Bachelor',
 			major: 'Web Development',
@@ -146,37 +146,19 @@ export const me = {
 		{
 			name: 'TailwindCss',
 		},
-		{
-			name: 'Html',
-		},
-		{
-			name: 'Css',
-		},
 	],
 	social: [
 		{
 			name: 'Github',
 			uri: 'https://github.com/Jeremy-To',
-			hover: {
-				bg: 'blue.500',
-				color: 'white',
-			},
 		},
 		{
 			name: 'LinkedIn',
 			uri: 'https://www.linkedin.com/in/jérémy-to/',
-			hover: {
-				bg: 'blue.500',
-				color: 'white',
-			},
 		},
 		{
 			name: 'My résumé',
 			uri: '/assets/CV FR Jeremy TO.pdf',
-			hover: {
-				bg: 'blue.500',
-				color: 'white',
-			},
 		},
 	],
 
