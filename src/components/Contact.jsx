@@ -23,18 +23,20 @@ const Contact = () => {
 		e.preventDefault();
 		emailjs
 			.send(
-				'service_4if56mj',
-				'template_ot7dve8',
+				import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+				import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
 				template,
-				'D245rlMNoPSNleNAY'
+				import.meta.env.VITE_APP_EMAILJS_USER_ID
 			)
 			.then(
 				(result) => {
 					console.log(result.text);
+					console.log(template);
 					setIsLoading(false);
 				},
 				(error) => {
 					console.log(error.text);
+					console.log(template);
 					setIsLoading(false);
 				}
 			);
