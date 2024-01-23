@@ -2,6 +2,7 @@ import useThemeStore from '../../store/themeStore';
 
 /* eslint-disable react/prop-types */
 function Footer({ mySocial }) {
+	console.log(mySocial);
 	const { darkMode } = useThemeStore();
 	return (
 		<footer className={darkMode ? 'dark' : ''}>
@@ -10,7 +11,10 @@ function Footer({ mySocial }) {
 				<div className="flex gap-4">
 					{mySocial.map((item, number) => (
 						<div key={number}>
-							<p className="dark:text-white">{item.name}</p>
+							<p className="dark:text-white">
+								{item.icon && <item.icon />}
+								{item.name}
+							</p>
 						</div>
 					))}
 				</div>

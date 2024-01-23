@@ -44,7 +44,7 @@ const Contact = () => {
 
 	return (
 		<section id="contact" className={darkMode ? 'dark' : ''}>
-			<div className="py-12 px-24 flex flex-col gap-8 justify-center items-start dark:bg-blue-900 bg-blue-400 pt-8">
+			<div className="py-12 px-24 flex flex-col gap-8 justify-center items-start dark:bg-blue-900 bg-blue-300 pt-8">
 				<h2 className="text-8xl font-bold dark:text-white">Contact</h2>
 				<div className="p-8 rounded-md bg-slate-300 dark:bg-slate-800">
 					<form id="form">

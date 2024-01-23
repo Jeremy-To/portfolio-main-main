@@ -5,7 +5,7 @@ function Skills({ mySkills, myEducation, myAbout }) {
 	const { darkMode } = useThemeStore();
 	return (
 		<section id="about" className={darkMode ? 'dark' : ''}>
-			<div className="dark:bg-cyan-800 bg-cyan-200 pt-8 py-12 px-24 flex flex-col gap-8 justify-center items-start">
+			<div className="dark:bg-cyan-800 bg-blue-200 pt-8 py-12 px-24 flex flex-col gap-8 justify-center items-start">
 				<h2 className="text-8xl font-bold dark:text-white ">About Me</h2>
 				<p className="text-xl">{myAbout}</p>
 				<h3 className="text-2xl font-bold dark:text-white">Get to know me!</h3>
@@ -19,9 +19,10 @@ function Skills({ mySkills, myEducation, myAbout }) {
 				<div className="flex flex-wrap gap-2 ">
 					{mySkills.map((skill, number) => (
 						<div
-							className="px-12 py-4 bg-blue-500 hover:bg-blue-900 dark:bg-blue-900  dark:text-white rounded-md"
+							className="px-12 py-4 bg-blue-500 hover:bg-blue-900 dark:bg-blue-900  dark:text-white rounded-md flex flex-col justify-center items-center"
 							key={number}
 						>
+							<skill.icon className="w-12 h-12" />
 							<p className="dark:text-white"> {skill.name}</p>
 						</div>
 					))}
