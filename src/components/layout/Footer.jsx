@@ -2,7 +2,6 @@ import useThemeStore from '../../store/themeStore';
 
 /* eslint-disable react/prop-types */
 function Footer({ mySocial }) {
-	console.log(mySocial);
 	const { darkMode } = useThemeStore();
 	return (
 		<footer className={darkMode ? 'dark' : ''}>
