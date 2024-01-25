@@ -29,12 +29,12 @@ function Projects({ myProjects }) {
 	const { darkMode } = useThemeStore();
 	return (
 		<section id="projects" className={darkMode ? 'dark' : ''}>
-			<div className="bg-slate-200 dark:bg-slate-800 pt-8 py-12 px-24 flex flex-col gap-8 justify-center items-start">
+			<div className="bg-stone-300 dark:bg-slate-700 pt-8 py-12 px-24 flex flex-col gap-8 justify-center items-start">
 				<h2 className="text-8xl font-bold dark:text-white">Projects</h2>
 				<div className="flex flex-wrap gap-4">
 					{myProjects.map((project, number) => (
 						<div
-							className="flex flex-col flex-wrap bg-stone-400 dark:bg-stone-900 py-12 px-12 rounded-lg"
+							className="flex flex-col flex-wrap bg-slate-400 dark:bg-slate-800 py-12 px-12 rounded-lg"
 							key={number}
 						>
 							<img
@@ -48,7 +48,7 @@ function Projects({ myProjects }) {
 									{project.name}
 								</h3>
 								<button
-									className="bg-orange-800 hover:bg-orange-900  font-bold py-2 px-4 rounded dark:text-white"
+									className="bg-stone-600 hover:bg-stone-900  font-bold py-2 px-4 rounded dark:text-white"
 									onClick={() => openPopin(number)}
 								>
 									More
@@ -65,6 +65,7 @@ function Projects({ myProjects }) {
 							alt={myProjects?.[0].name}
 							description={myProjects?.[0].description}
 							contribution={myProjects?.[0].contribution}
+							links={myProjects?.[0].links}
 						/>
 					</div>
 				)}
@@ -76,6 +77,7 @@ function Projects({ myProjects }) {
 							alt={myProjects?.[1].name}
 							description={myProjects?.[1].description}
 							contribution={myProjects?.[1].contribution}
+							links={myProjects?.[1].links}
 						/>
 					</div>
 				)}
@@ -87,6 +89,7 @@ function Projects({ myProjects }) {
 							alt={myProjects?.[2].name}
 							description={myProjects?.[2].description}
 							contribution={myProjects?.[2].contribution}
+							links={myProjects?.[2].links}
 						/>
 					</div>
 				)}
@@ -98,6 +101,7 @@ function Projects({ myProjects }) {
 							alt={myProjects?.[3].name}
 							description={myProjects?.[3].description}
 							contribution={myProjects?.[3].contribution}
+							links={myProjects?.[3].links}
 						/>
 					</div>
 				)}

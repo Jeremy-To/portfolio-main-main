@@ -4,16 +4,18 @@ import useThemeStore from '../../store/themeStore';
 function Footer({ mySocial }) {
 	const { darkMode } = useThemeStore();
 	return (
-		<footer className={darkMode ? 'dark' : ''}>
-			<div className="bg-gray-200 dark:bg-slate-900 flex flex-col  gap-8 py-12 px-24 ">
-				<h4 className="text-xl font-bold uppercase dark:text-white">Social</h4>
+		<footer className={darkMode ? 'dark  ' : ''}>
+			<div className="flex  justify-center align-center dark:bg-slate-900 bg-gray-200  gap-8 py-12 px-24 w-full">
 				<div className="flex gap-4">
 					{mySocial.map((item, number) => (
 						<div key={number}>
-							<p className="dark:text-white">
+							<a
+								href={mySocial?.[number].uri}
+								className="dark:text-white flex justify-center items-center gap-2"
+							>
 								{item.icon && <item.icon />}
 								{item.name}
-							</p>
+							</a>
 						</div>
 					))}
 				</div>

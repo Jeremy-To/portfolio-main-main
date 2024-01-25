@@ -8,8 +8,8 @@ function Hero({ myName, myLocation, mySubtitle }) {
 			<div
 				className={`w-full h-screen bg-gradient-to-r ${
 					darkMode
-						? 'from-violet-800 via-blue-800 to-red-700'
-						: 'from-violet-800 via-blue-200 to-red-700'
+						? 'from-slate-800 via-stone-800 to-blue-700'
+						: 'from-slate-800 via-stone-200 to-blue-700'
 				} background-animate flex flex-col gap-4  justify-center items-center`}
 			>
 				<div className="flex items-center justify-center flex-wrap">
