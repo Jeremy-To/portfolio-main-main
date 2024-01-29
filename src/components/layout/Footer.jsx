@@ -5,7 +5,7 @@ function Footer({ mySocial }) {
 	const { darkMode } = useThemeStore();
 	return (
 		<footer className={darkMode ? 'dark  ' : ''}>
-			<div className="flex  justify-center align-center dark:bg-slate-900 bg-gray-200  gap-8 py-12 px-24 w-full">
+			<div className="flex justify-center align-center dark:bg-slate-900 bg-gray-200  gap-8 py-12 px-24 w-full">
 				<div className="flex gap-4">
 					{mySocial.map((item, number) => (
 						<div key={number}>

@@ -34,7 +34,7 @@ export const me = {
 		{
 			degree: 'Bachelor',
 			major: 'Web Development',
-			school: 'OpenClassRooms',
+			school: 'OpenClassrooms',
 			graduation: '2024',
 		},
 		{
@@ -52,11 +52,18 @@ export const me = {
 			contribution:
 				'I used React for the front-end and Firebase for the database in order to build this app.',
 			technologies: [
-				'React.js',
-				'Firebase',
-				'Typescript',
-				'Tailwindcss',
-				'Redux',
+				{
+					name: 'React',
+					icon: FaReact,
+				},
+				{
+					name: 'Typescript',
+					icon: BiLogoTypescript,
+				},
+				{
+					name: 'Redux',
+					icon: SiRedux,
+				},
 			],
 			links: [
 				{
@@ -76,11 +83,18 @@ export const me = {
 			contribution:
 				'Built it entirely with React for the front-end and firebase for the database ',
 			technologies: [
-				'React.js',
-				'Firebase',
-				'Typescript',
-				'Tailwindcss',
-				'Redux',
+				{
+					name: 'React',
+					icon: FaReact,
+				},
+				{
+					name: 'Typescript',
+					icon: BiLogoTypescript,
+				},
+				{
+					name: 'Redux',
+					icon: SiRedux,
+				},
 			],
 			links: [
 				{
@@ -99,7 +113,16 @@ export const me = {
 			description: 'A website to display my projects and resume',
 			contribution:
 				'I built the entire website from scratch using React.js, TypeScript, and Chakra UI and deployed it on Netlify.',
-			technologies: ['React', 'Typescript', 'Chakra-UI', 'Vercel'],
+			technologies: [
+				{
+					name: 'React',
+					icon: FaReact,
+				},
+				{
+					name: 'Typescript',
+					icon: BiLogoTypescript,
+				},
+			],
 			links: [
 				{
 					name: 'Jeremy TO Website',
@@ -119,7 +142,16 @@ export const me = {
 				'A Weather app using an api to get weather based on the place of your choise',
 			contribution:
 				'I built this app using react for fetching geolocalisation and weather form it.',
-			technologies: ['React.js', 'Javascript', 'Css', 'HTML'],
+			technologies: [
+				{
+					name: 'React',
+					icon: BiLogoTypescript,
+				},
+				{
+					name: 'Typescript',
+					icon: FaReact,
+				},
+			],
 			links: [
 				{
 					name: 'Weather app',
