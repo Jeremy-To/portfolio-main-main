@@ -29,16 +29,7 @@ const Contact = () => {
 				import.meta.env.VITE_APP_EMAILJS_USER_ID
 			)
 			.then(
-				(result) => {
-					console.log(result.text);
-					console.log(template);
-					setIsLoading(false);
-				},
-				(error) => {
-					console.log(error.text);
-					console.log(template);
-					setIsLoading(false);
-				}
+					setIsLoading(false)
 			);
 	};
 

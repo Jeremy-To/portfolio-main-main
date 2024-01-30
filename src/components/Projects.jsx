@@ -10,9 +10,9 @@ function Projects({ myProjects }) {
 	const [isPopinOpen1, setIsPopinOpen1] = useState(false);
 	const [isPopinOpen2, setIsPopinOpen2] = useState(false);
 	const [isPopinOpen3, setIsPopinOpen3] = useState(false);
+	//const [isPopinOpen3, setIsPopinOpen3] = useState([false, false, false, false]);
 
 	const openPopin = (number) => {
-		console.log(number);
 		if (number === 0) setIsPopinOpen0(true);
 		if (number === 1) setIsPopinOpen1(true);
 		if (number === 2) setIsPopinOpen2(true);
@@ -34,7 +34,7 @@ function Projects({ myProjects }) {
 				<div className="flex flex-wrap gap-4">
 					{myProjects.map((project, number) => (
 						<div
-							className="inline-flex flex-col flex-wrap rounded-lg bg-stone-400 pt-4 px-4 dark:bg-slate-800 h-56 w-56 relative"
+							className="inline-flex flex-col flex-wrap rounded-lg bg-stone-400 pt-4 px-4 dark:bg-slate-800 h-[290px] w-[100%] md:h-[390px] md:w-[390px] relative"
 							key={number}
 						>
 							<img
