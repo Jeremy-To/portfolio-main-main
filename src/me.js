@@ -1,7 +1,7 @@
-import bookImage from './assets/BookStore.png';
-import ChatApp from './assets/ChatApp.png';
-import weatherapp from './assets/weatherapp.png';
-import myWebsite from './assets/myWebsite.png';
+import bookImage from './assets/BookStore.webp';
+import ChatApp from './assets/ChatApp.webp';
+import weatherapp from './assets/weatherapp.webp';
+import myWebsite from './assets/myWebsite.webp';
 import { BiLogoTypescript } from 'react-icons/bi';
 import { IoLogoJavascript } from 'react-icons/io5';
 import { FaReact } from 'react-icons/fa';
@@ -12,10 +12,6 @@ import { SiTailwindcss } from 'react-icons/si';
 import { FaGithub } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
 
-//TODO
-//json personal
-
-//json projects
 export const me = {
 	name: 'Jérémy TO',
 	subtitle: 'Developer',
@@ -23,14 +19,8 @@ export const me = {
 	about:
 		'Developer building website. I love making fun projects on the side. Checkout some of my recent projects below!',
 	location: 'Paris, France',
-	image: '/assets/world.jpeg',
+	image: '/assets/world.webp',
 	education: [
-		/* 	{
-			degree: 'Master',
-			major: 'Data, Systems and Network Security',
-			school: '2600 School',
-			graduation: '2026',
-		}, */
 		{
 			degree: 'Bachelor',
 			major: 'Web Development',
