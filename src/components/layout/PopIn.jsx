@@ -29,7 +29,7 @@ const Popin = ({
 					className="w-full block object-cover"
 					loading="lazy"
 				/>
-				<div className="py-2 flex sm:flex-col justify-center items-start gap-2 ">
+				<div className="py-2 flex flex-col justify-center items-start gap-2">
 					<h3 className="dark:text-white font-bold text-2xl mb-8">{alt}</h3>
 					<div className="flex-wrap flex gap-2">
 						{technologies.map((link, number) => (

@@ -20,6 +20,7 @@ const Contact = () => {
 
 	const sendEmail = (e) => {
 		setIsLoading(true);
+		console.log(template);
 		e.preventDefault();
 		emailjs
 			.send(
@@ -28,9 +29,7 @@ const Contact = () => {
 				template,
 				import.meta.env.VITE_APP_EMAILJS_USER_ID
 			)
-			.then(
-					setIsLoading(false)
-			);
+			.then(setIsLoading(false));
 	};
 
 	return (
