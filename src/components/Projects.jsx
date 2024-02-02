@@ -6,24 +6,18 @@ import { FaGithub } from 'react-icons/fa';
 import PopIn from './layout/PopIn';
 /* eslint-disable react/prop-types */
 function Projects({ myProjects }) {
-	const [isPopinOpen0, setIsPopinOpen0] = useState(false);
-	const [isPopinOpen1, setIsPopinOpen1] = useState(false);
-	const [isPopinOpen2, setIsPopinOpen2] = useState(false);
-	const [isPopinOpen3, setIsPopinOpen3] = useState(false);
-	//const [isPopinOpen3, setIsPopinOpen3] = useState([false, false, false, false]);
+	const [isPopinOpen, setIsPopinOpen] = useState([false, false, false, false]);
 
 	const openPopin = (number) => {
-		if (number === 0) setIsPopinOpen0(true);
-		if (number === 1) setIsPopinOpen1(true);
-		if (number === 2) setIsPopinOpen2(true);
-		if (number === 3) setIsPopinOpen3(true);
+		let newIsPopinOpen = [...isPopinOpen];
+		newIsPopinOpen[number] = true;
+		setIsPopinOpen(newIsPopinOpen);
 	};
 
 	const closePopin = (number) => {
-		if (number === 0) setIsPopinOpen0(false);
-		if (number === 1) setIsPopinOpen1(false);
-		if (number === 2) setIsPopinOpen2(false);
-		if (number === 3) setIsPopinOpen3(false);
+		let newIsPopinOpen = [...isPopinOpen];
+		newIsPopinOpen[number] = false;
+		setIsPopinOpen(newIsPopinOpen);
 	};
 
 	const { darkMode } = useThemeStore();
@@ -68,57 +62,24 @@ function Projects({ myProjects }) {
 						</div>
 					))}
 				</div>
-				{isPopinOpen0 && (
-					<div className="fixed left-0 top-0 z-50 flex h-full w-full items-center justify-center bg-black bg-opacity-50">
-						<PopIn
-							onClose={() => closePopin(0)}
-							src={myProjects?.[0].image}
-							alt={myProjects?.[0].name}
-							description={myProjects?.[0].description}
-							contribution={myProjects?.[0].contribution}
-							links={myProjects?.[0].links}
-							technologies={myProjects?.[0].technologies}
-						/>
-					</div>
-				)}
-				{isPopinOpen1 && (
-					<div className="fixed left-0 top-0 z-50 flex h-full w-full items-center justify-center bg-black bg-opacity-50">
-						<PopIn
-							onClose={() => closePopin(1)}
-							src={myProjects?.[1].image}
-							alt={myProjects?.[1].name}
-							description={myProjects?.[1].description}
-							contribution={myProjects?.[1].contribution}
-							links={myProjects?.[1].links}
-							technologies={myProjects?.[1].technologies}
-						/>
-					</div>
-				)}
-				{isPopinOpen2 && (
-					<div className="fixed left-0 top-0 z-50 flex h-full w-full items-center justify-center bg-black bg-opacity-50">
-						<PopIn
-							onClose={() => closePopin(2)}
-							src={myProjects?.[2].image}
-							alt={myProjects?.[2].name}
-							description={myProjects?.[2].description}
-							contribution={myProjects?.[2].contribution}
-							links={myProjects?.[2].links}
-							technologies={myProjects?.[2].technologies}
-						/>
-					</div>
-				)}
-				{isPopinOpen3 && (
-					<div className="fixed left-0 top-0 z-50 flex h-full w-full items-center justify-center bg-black bg-opacity-50">
-						<PopIn
-							onClose={() => closePopin(3)}
-							src={myProjects?.[3].image}
-							alt={myProjects?.[3].name}
-							description={myProjects?.[3].description}
-							contribution={myProjects?.[3].contribution}
-							links={myProjects?.[3].links}
-							technologies={myProjects?.[3].technologies}
-						/>
-					</div>
+				{isPopinOpen.map(
+					(isOpen, number) =>
+						isOpen && (
+							<div
+								key={number}
+								className="fixed left-0 top-0 z-50 flex h-full w-full items-center justify-center bg-black bg-opacity-50"
+							>
+								<PopIn
+									onClose={() => closePopin(number)}
+									src={myProjects?.[number].image}
+									alt={myProjects?.[number].name}
+									description={myProjects?.[number].description}
+									contribution={myProjects?.[number].contribution}
+									links={myProjects?.[number].links}
+									technologies={myProjects?.[number].technologies}
+								/>
+							</div>
+						)
 				)}
 			</div>
 		</section>
